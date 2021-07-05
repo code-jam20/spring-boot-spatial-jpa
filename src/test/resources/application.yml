@@ -1,0 +1,23 @@
+spring.application.name: spatial-jpa-service
+
+server:
+  port: 8080
+  servlet:
+    context-path: /spatial
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: MySQL
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.mysql.MySQL56SpatialDialect
+
+
+
+
