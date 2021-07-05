@@ -38,8 +38,6 @@ public abstract class BaseTest {
 
     @DynamicPropertySource
     static void databaseProperties(DynamicPropertyRegistry registry) {
-        System.out.println("Tanvir  :: " + DATABASE.getUsername());
-        System.out.println("Tanvir  :: " + DATABASE.getPassword());
         registry.add("spring.datasource.url", DATABASE::getJdbcUrl);
         registry.add("spring.datasource.username", DATABASE::getUsername);
         registry.add("spring.datasource.password", DATABASE::getPassword);

@@ -8,7 +8,30 @@ You can add **SPATIAL INDEX** to speed up search.
 
 <br />
 
-###### Example to search near by customers using :
+###### Example to search near by customers using spatial column:
 ```
 localhost:8080/spatial/secure/customers/nearby?Latitude=37.856575&Longitude=-121.698989&Format=km
+```
+
+```
+[
+   {
+      "distance":55.4,
+      "distanceFormat":"km",
+      "firstName":"John",
+      "lastName":"Doe"
+   },
+   {
+      "distance":49.6,
+      "distanceFormat":"km",
+      "firstName":"Brain",
+      "lastName":"Lara"
+   },
+   {
+      "distance":87.5,
+      "distanceFormat":"km",
+      "firstName":"Kyle",
+      "lastName":"Doe"
+   }
+]
 ```
